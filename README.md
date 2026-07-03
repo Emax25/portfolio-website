@@ -41,6 +41,6 @@ The current datasets in `src/data/*.json` are **illustrative placeholders** flag
 2. Replace the file contents and set `"illustrative": false`.
 3. In the project's content file, set `illustrative: false` on the matching `ChartSpec` — the badge disappears.
 
-### Updating the résumé
+### Updating the resume
 
 Replace `public/resume.pdf` with the new PDF (keep the filename).

@@ -65,7 +65,7 @@ export function Hero() {
             className={buttonVariants({ variant: 'default', size: 'lg', className: 'gap-2 shadow-sm font-semibold' })}
           >
             <Download className="h-4 w-4" />
-            <span>Download Résumé</span>
+            <span>Download Resume</span>
           </a>
           
           <a
