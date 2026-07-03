@@ -1,0 +1,13 @@
+{
+  "illustrative": true,
+  "data": [
+    { "bin": "[-2.0%, -1.5%)", "frequency": 1 },
+    { "bin": "[-1.5%, -1.0%)", "frequency": 3 },
+    { "bin": "[-1.0%, -0.5%)", "frequency": 8 },
+    { "bin": "[-0.5%, 0.0%)", "frequency": 14 },
+    { "bin": "[0.0%, 0.5%)", "frequency": 18 },
+    { "bin": "[0.5%, 1.0%)", "frequency": 12 },
+    { "bin": "[1.0%, 1.5%)", "frequency": 5 },
+    { "bin": "[1.5%, 2.0%)", "frequency": 2 }
+  ]
+}

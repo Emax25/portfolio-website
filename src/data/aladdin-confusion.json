@@ -1,0 +1,7 @@
+{
+  "illustrative": true,
+  "data": [
+    { "actual": "Legitimate", "predictedLegitimate": 940, "predictedScam": 60 },
+    { "actual": "Scam-Likely", "predictedLegitimate": 45, "predictedScam": 955 }
+  ]
+}

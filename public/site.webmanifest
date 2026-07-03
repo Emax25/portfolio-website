@@ -1,0 +1,16 @@
+{
+  "name": "Charlie Carvajal Portfolio",
+  "short_name": "Carvajal Portfolio",
+  "description": "Quantitative Finance Portfolio of Charlie Carvajal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

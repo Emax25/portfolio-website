@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlie Carvajal | Quantitative Finance Portfolio</title>
+    <meta name="description" content="Portfolio of Charlie Carvajal — M.S. Financial Mathematics at UChicago. Quantitative research, trading systems, and Bayesian machine learning projects." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Charlie Carvajal | Quantitative Finance Portfolio" />
+    <meta property="og:description" content="Portfolio of Charlie Carvajal — M.S. Financial Mathematics at UChicago. Quantitative research, trading systems, and Bayesian machine learning projects." />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Charlie Carvajal | Quantitative Finance Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Charlie Carvajal — M.S. Financial Mathematics at UChicago. Quantitative research, trading systems, and Bayesian machine learning projects." />
+
+    <!-- Theme Color for light/dark modes -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && !window.matchMedia('(prefers-color-scheme: light)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

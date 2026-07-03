@@ -1,0 +1,26 @@
+{
+  "illustrative": true,
+  "data": [
+    { "iteration": 0, "suspiciousWallet": 0.10, "normalWallet": 0.10 },
+    { "iteration": 50, "suspiciousWallet": 0.28, "normalWallet": 0.08 },
+    { "iteration": 100, "suspiciousWallet": 0.45, "normalWallet": 0.05 },
+    { "iteration": 150, "suspiciousWallet": 0.62, "normalWallet": 0.03 },
+    { "iteration": 200, "suspiciousWallet": 0.75, "normalWallet": 0.02 },
+    { "iteration": 250, "suspiciousWallet": 0.81, "normalWallet": 0.01 },
+    { "iteration": 300, "suspiciousWallet": 0.85, "normalWallet": 0.02 },
+    { "iteration": 350, "suspiciousWallet": 0.87, "normalWallet": 0.01 },
+    { "iteration": 400, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
+    { "iteration": 450, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
+    { "iteration": 500, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
+    { "iteration": 550, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
+    { "iteration": 600, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
+    { "iteration": 650, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
+    { "iteration": 700, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
+    { "iteration": 750, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
+    { "iteration": 800, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
+    { "iteration": 850, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
+    { "iteration": 900, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
+    { "iteration": 950, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
+    { "iteration": 1000, "suspiciousWallet": 0.88, "normalWallet": 0.02 }
+  ]
+}
