@@ -64,7 +64,7 @@ export function ProjectsSection() {
                     to={`/projects/${project.slug}`}
                     className={buttonVariants({ variant: 'ghost', size: 'sm', className: 'text-xs text-primary font-semibold hover:gap-2 transition-all p-0 group' })}
                   >
-                    <span>Explore Case Study</span>
+                    <span>Explore Project</span>
                     <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                 </CardFooter>

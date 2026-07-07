@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, Moon, Sun, Mail, Linkedin, Github, FileText } from 'lucide-react';
 import { useTheme } from '@/components/theme-provider';
+import { profile } from '@/content/profile';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Sheet,
@@ -223,7 +224,7 @@ export function LayoutShell({ children }: LayoutShellProps) {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a
-              href="https://github.com/Emax25"
+              href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonVariants({ variant: 'ghost', size: 'icon', className: 'h-9 w-9 rounded-md' })}

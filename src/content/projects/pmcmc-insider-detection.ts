@@ -52,5 +52,40 @@ export const pmcmcInsiderDetection: Project = {
       label: 'Code',
       href: 'https://github.com/Emax25/PMCMC---Polymarket'
     }
+  ],
+  status: 'active',
+  retrospective: {
+    limitations: [
+      '[PLACEHOLDER — owner copy pending] A limitation of the sampler\'s variance behavior on the real Polymarket wallet population would be described here.',
+      '[PLACEHOLDER — owner copy pending] A limitation around how the model handles wallets with very short trading histories or sparse activity would be described here.',
+      '[PLACEHOLDER — owner copy pending] A limitation of the synthetic-to-real generalization gap (how the 0.96 AUC benchmark may not transfer) would be described here.'
+    ],
+    nowDifferent: [
+      '[PLACEHOLDER — owner copy pending] A description of how the sampler or model specification would be revised with current tooling would be placed here.',
+      '[PLACEHOLDER — owner copy pending] A description of additional validation or robustness checks that would be added now would be placed here.',
+      '[PLACEHOLDER — owner copy pending] A description of how the engineering workflow (e.g. use of Claude Code, subagents, or verification steps) would change the build process would be placed here.'
+    ]
+  },
+  timeline: [
+    {
+      date: '2026',
+      title: '[PLACEHOLDER — owner copy pending] Initial project scoping',
+      description: '[PLACEHOLDER — owner copy pending] A description of the initial problem framing and data-gathering phase would be placed here.'
+    },
+    {
+      date: '2026',
+      title: '[PLACEHOLDER — owner copy pending] Sampler implementation',
+      description: '[PLACEHOLDER — owner copy pending] A description of building and validating the Particle Gibbs / interacting PMCMC sampler would be placed here.'
+    },
+    {
+      date: '2026',
+      title: '[PLACEHOLDER — owner copy pending] Application to real Polymarket data',
+      description: '[PLACEHOLDER — owner copy pending] A description of applying the sampler to the real trade dataset and surfacing candidate wallets would be placed here.'
+    },
+    {
+      date: '2026',
+      title: '[PLACEHOLDER — owner copy pending] Revisit and extension',
+      description: '[PLACEHOLDER — owner copy pending] A description of a planned or completed revisit of the project using current tooling would be placed here.'
+    }
   ]
 };

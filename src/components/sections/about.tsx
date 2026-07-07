@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { MapPin, Sparkles } from 'lucide-react';
-import { profile } from '@/content/profile';
+import { aboutCards, profile } from '@/content/profile';
 
 export function About() {
   const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -41,18 +41,18 @@ export function About() {
             <div className="p-5 rounded-lg border border-border/50 bg-card/20 space-y-3">
               <div className="flex items-center gap-2 font-semibold text-foreground text-sm">
                 <Sparkles className="h-4 w-4 text-primary" />
-                <span>Foundational Philosophy</span>
+                <span>{aboutCards.philosophy.title}</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Applying rigorous scientific inquiry from astrophysics and computational systems modeling to formulate, optimize, and test quantitative trading strategies.
+                {aboutCards.philosophy.body}
               </p>
             </div>
-            
+
             <div className="p-5 rounded-lg border border-border/50 bg-card/20 space-y-2">
-              <span className="text-xs font-semibold text-muted-foreground tracking-wider uppercase">Current Focus</span>
-              <div className="font-bold text-sm text-foreground">University of Chicago</div>
+              <span className="text-xs font-semibold text-muted-foreground tracking-wider uppercase">{aboutCards.currentFocus.label}</span>
+              <div className="font-bold text-sm text-foreground">{aboutCards.currentFocus.heading}</div>
               <p className="text-xs text-muted-foreground">
-                Pursuing MSFM. Combining stochastic processes, statistical time-series, options pricing, and high-performance computing to build robust financial systems.
+                {aboutCards.currentFocus.body}
               </p>
             </div>
           </div>

@@ -32,7 +32,7 @@ export function Contact() {
     {
       icon: <Github className="h-5 w-5 text-foreground" />,
       label: 'GitHub',
-      value: 'github.com/Emax25',
+      value: profile.github.replace(/^https?:\/\//, ''),
       href: profile.github,
       description: 'Open-source code, quantitative algorithms, and developer activity.',
     },

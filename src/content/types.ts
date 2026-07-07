@@ -28,6 +28,23 @@ export interface Project {
     label: string;
     href: string;
   }[];
+  status?: 'active' | 'complete';
+  retrospective?: { limitations: string[]; nowDifferent: string[] };
+  timeline?: { date: string; title: string; description?: string }[];
+}
+
+export interface HowIBuildContent {
+  intro: string[];
+  philosophy: { title: string; body: string[] };
+  toolchain: { name: string; role: string }[];
+  workflow: { stage: string; description: string }[];
+  verification: { title: string; body: string[] };
+}
+
+export interface JourneyContent {
+  title: string;
+  subtitle: string;
+  sections: { id: string; heading: string; body: string[] }[];
 }
 
 export interface Profile {
@@ -38,6 +55,18 @@ export interface Profile {
   linkedin: string;
   github: string;
   bio: string[];
+}
+
+export interface AboutCards {
+  philosophy: {
+    title: string;
+    body: string;
+  };
+  currentFocus: {
+    label: string;
+    heading: string;
+    body: string;
+  };
 }
 
 export interface ExperienceEntry {
