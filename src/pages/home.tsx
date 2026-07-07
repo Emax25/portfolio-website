@@ -5,8 +5,11 @@ import { ProjectsSection } from '@/components/sections/projects';
 import { Experience } from '@/components/sections/experience';
 import { Education } from '@/components/sections/education';
 import { Contact } from '@/components/sections/contact';
+import { usePageTitle } from '@/lib/use-page-title';
 
 export function Home() {
+  usePageTitle();
+
   return (
     <div className="w-full space-y-16 md:space-y-24">
       {/* Hero Section - Full width background styling inside component */}

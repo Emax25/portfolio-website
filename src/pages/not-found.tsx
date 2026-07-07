@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
+import { usePageTitle } from '@/lib/use-page-title';
 
 export function NotFound() {
+  usePageTitle('Page Not Found');
+
   const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const animationProps = isReduced

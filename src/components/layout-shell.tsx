@@ -18,20 +18,26 @@ interface LayoutShellProps {
   children: ReactNode;
 }
 
+type NavItem =
+  | { label: string; kind: 'hash'; id: string }
+  | { label: string; kind: 'route'; to: string };
+
+const navItems: NavItem[] = [
+  { label: 'About', kind: 'hash', id: 'about' },
+  { label: 'Skills', kind: 'hash', id: 'skills' },
+  { label: 'Projects', kind: 'hash', id: 'projects' },
+  { label: 'Experience', kind: 'hash', id: 'experience' },
+  { label: 'Education', kind: 'hash', id: 'education' },
+  { label: 'Journey', kind: 'route', to: '/journey' },
+  { label: 'How I Build', kind: 'route', to: '/how-i-build' },
+  { label: 'Contact', kind: 'hash', id: 'contact' },
+];
+
 export function LayoutShell({ children }: LayoutShellProps) {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { label: 'About', id: 'about' },
-    { label: 'Skills', id: 'skills' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Experience', id: 'experience' },
-    { label: 'Education', id: 'education' },
-    { label: 'Contact', id: 'contact' },
-  ];
 
   const handleNavClick = (targetId: string) => {
     setIsOpen(false);
@@ -91,20 +97,34 @@ export function LayoutShell({ children }: LayoutShellProps) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`/#${item.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.id);
-                }}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 text-[13px] lg:text-sm font-medium">
+            {navItems.map((item) =>
+              item.kind === 'route' ? (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={
+                    location.pathname === item.to
+                      ? 'text-foreground transition-colors'
+                      : 'text-muted-foreground hover:text-foreground transition-colors'
+                  }
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.id}
+                  href={`/#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.id);
+                  }}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
             <Separator orientation="vertical" className="h-4" />
             <Button
               variant="ghost"
@@ -150,19 +170,34 @@ export function LayoutShell({ children }: LayoutShellProps) {
                   <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-4 mt-6">
-                  {navItems.map((item) => (
-                    <a
-                      key={item.id}
-                      href={`/#${item.id}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavClick(item.id);
-                      }}
-                      className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
+                  {navItems.map((item) =>
+                    item.kind === 'route' ? (
+                      <Link
+                        key={item.to}
+                        to={item.to}
+                        onClick={() => setIsOpen(false)}
+                        className={
+                          location.pathname === item.to
+                            ? 'text-base font-medium text-foreground transition-colors py-1'
+                            : 'text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1'
+                        }
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        key={item.id}
+                        href={`/#${item.id}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavClick(item.id);
+                        }}
+                        className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1"
+                      >
+                        {item.label}
+                      </a>
+                    )
+                  )}
                   <Separator className="my-2" />
                   <div className="flex flex-col space-y-3 pt-2">
                     <a

@@ -6,10 +6,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProjectChart } from '@/components/charts/ProjectChart';
+import { usePageTitle } from '@/lib/use-page-title';
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
   const project = projectsRegistry.find((p) => p.slug === slug);
+
+  usePageTitle(project?.title);
 
   const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
