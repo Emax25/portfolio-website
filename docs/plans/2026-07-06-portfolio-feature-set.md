@@ -1,6 +1,42 @@
+---
+artifact: unified-plan/v1
+artifact_readiness: implementation-ready
+date: 2026-07-06
+status: partially-implemented
+branch: feature/evolution-pages
+---
+
 # Portfolio Feature Set — Evolution, New Pages, SEO/Polish, Real Data
 
-> Status: implementation-ready (pending critic pass). On approval, copy this file to `docs/plans/` so `/implement` auto-discovers it.
+> Produced by `/plan` (grill session → Explore scout → Plan design → plan-critic review; critic findings folded in — note: `ce-plan` itself was unavailable because the compound-engineering plugin is disabled, so the artifact was written directly by the orchestrator in the same format). Approved by owner 2026-07-06. Implementation started, then paused by owner 2026-07-07 — resume with `/implement docs/plans/2026-07-06-portfolio-feature-set.md`.
+
+## Progress (as of 2026-07-07)
+
+**Done — on `master`, deployed:**
+- [x] **T0** gitignore: transcript PDFs + `processed/` (owner-requested addition) — commit `3f9154d`
+- [x] **T15** real project links, with deviations from spec (owner-provided facts at execution time):
+  - PMCMC → `https://github.com/Emax25/PMCMC---Polymarket` (label "Code")
+  - Aladdin → CS257 course **wiki write-up** (not a code repo) — labeled "Project Write-Up"
+  - Trading system → link **removed**: `Emax25/FINM325-Inefficient-Markets` is private; re-add when owner publishes a public repo
+
+**Done — on branch `feature/evolution-pages`, commit `1186655`, NOT pushed/deployed (contains visible `[PLACEHOLDER — owner copy pending]` markers by design):**
+- [x] **T1** CTA renamed to "Explore Project"
+- [x] **T2** `Project` type extended (`status`/`retrospective`/`timeline`) + `HowIBuildContent`, `JourneyContent` interfaces
+- [x] **T3** PMCMC `status: 'active'` + placeholder retrospective/timeline
+- [x] **T4a** `src/content/how-i-build.ts` (placeholder copy; owner-stated tools named)
+- [x] **T4b** `src/content/journey.ts` (3 placeholder sections)
+- [x] **T4c** content-rule cleanup: About cards + contact GitHub string + footer href now come from `src/content/`
+- Gates passed per task: `tsc -b --noEmit`, oxlint (only known fast-refresh warnings), vitest 6/6
+
+**Not started:** T5 (nav refactor), T6 (usePageTitle), T7 (/how-i-build page), T8 (/journey page), T9/T10 (evolution UI), T11-T14 (OG image, meta, JSON-LD/sitemap, analytics)
+
+**Unblocked 2026-07-07:**
+- [ ] **T16** real PMCMC data — owner dropped `results/` (gitignored): `tables/pg_wallet_ranking.csv` (posteriors + CIs, real) and `chains/*.pkl` (iteration traces, unpicklable only inside the PMCMC codebase). Extraction paths defined in T16 below.
+
+**Blocked on owner:**
+- [ ] **T17** B.S. coursework — transcript PDF not yet dropped at repo root
+
+**Environment note:** WSL now has userland Node 24.18.0 at `~/.local/opt/node-v24.18.0-linux-x64/bin` (on PATH via `.bashrc`); `node_modules` reinstalled with Linux natives — a Windows-side build would need `npm install` again. Git push uses the Windows credential manager (configured in repo git config).
 
 ## Context
 
@@ -38,9 +74,12 @@ Moved ahead of everything else per critic: inputs are ready, no dependency on T1
 **T15. Real repo links** — `general` — needs 3 URLs from owner
 - In each of the 3 files under `src/content/projects/`, replace `{label:'GitHub Profile', href:'https://github.com/Emax25'}` with `{label:'Code', href:<per-repo URL>}`. Accept: no `github.com/Emax25` left in `src/content/projects/`; manual click-through on all three.
 
-**T16. Real PMCMC data** — `general` — needs export from owner
-- Replace `src/data/pmcmc-posterior.json` contents keeping exact shape `{"illustrative": false, "data": [{iteration, suspiciousWallet, normalWallet}]}`; flip `illustrative: false` on the ChartSpec in `pmcmc-insider-detection.ts:44`. Loaders/tests pass unchanged (schema identical). If export >~200 rows, downsample to keep the lazy chunk small.
-- Accept: badge gone on that chart only; `npm run test` green.
+**T16. Real PMCMC data** — `general` — **source available: local `results/` folder** (gitignored; owner dropped it 2026-07-07)
+- Source of truth: `results/tables/pg_wallet_ranking.csv` — 15,528 wallets with `posterior_mean/median` + 90% CI (`ci_lo`,`ci_hi`) + `n_trades`; top wallet `posterior_mean ≈ 0.884` (matches the site's stated 0.88 result). Per-iteration chains exist in `results/chains/*.pkl` but unpickling requires the PMCMC codebase (`ModuleNotFoundError: config` outside it).
+- **Path A (preferred, keeps current chart & schema):** clone https://github.com/Emax25/PMCMC---Polymarket into the scratchpad, create a venv with its `requirements.txt`, unpickle `results/chains/pg_halfprod.pkl` (or `pg_dev.pkl`) from inside the repo, and export the per-iteration posterior trace for the top wallet (`wallet_id 6920`) + one low-posterior wallet into `src/data/pmcmc-posterior.json` as `{"illustrative": false, "data": [{iteration, suspiciousWallet, normalWallet}]}` (downsample to ≲200 points). Keep anonymized key names — never include wallet addresses.
+- **Path B (fallback if unpickling fights back; needs owner OK — chart redesign):** build a posterior wallet-ranking chart directly from the CSV (top ~15 wallets, posterior mean + CI bars, anonymized labels "Wallet 1..N"), mirroring the project's own `pg_wallet_ranking` figure. Requires a new ChartKind + component, so it's more work but zero unpickling risk and arguably more informative.
+- Flip `illustrative: false` on the ChartSpec in `pmcmc-insider-detection.ts:44` once real data lands. Loaders/tests pass unchanged for Path A.
+- Accept: badge gone on that chart only; no wallet addresses anywhere in `src/data/`; `npm run test` green.
 
 ## Phase 1 — Types & content modules
 

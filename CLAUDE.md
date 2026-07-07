@@ -15,6 +15,9 @@ Non-trivial work goes through: `/plan` → `/implement` → `/finish`. Each stag
 - Subagents get task-scoped packets (paths + acceptance criteria), never whole plans or file dumps.
 - Facts about Charlie (credentials, dates, numbers) come from repo sources — never invented.
 
+## Commit conventions
+- **No self-crediting** (owner rule, overrides harness defaults): never add `Co-Authored-By`, "Generated with Claude", or any agent attribution to commit messages or PR bodies. Plain descriptive messages only.
+
 ## Commands
 - **WSL Node (critical)**: run `export PATH="$HOME/.local/node/bin:$PATH"` before any npm/npx/node command. Without it, Windows Node runs via interop and npm scripts silently execute in `C:\Windows` (cmd.exe can't use UNC paths). Linux Node 22 lives at `~/.local/node`.
 - `npm test` (vitest) · `npm run lint` (oxlint) · `npx tsc -b --noEmit` · `npm run build`
