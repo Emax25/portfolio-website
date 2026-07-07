@@ -196,3 +196,11 @@ Overwrite `public/resume.pdf` (keep filename).
 | `PROJECT_CONTEXT.md` | Factual source of truth for all site content |
 | `.cursor/agents/frontend-developer.md` | Subagent spec for UI work |
 | `.cursor/plans/quant_portfolio_website_plan_637b696c.plan.md` | Implementation plan + resolved decisions |
+
+---
+
+## Addendum — 2026-07-06: WSL environment + agent workflow
+
+- **Dev environment moved to WSL** (`/home/carvachar/portfolio-website`). The PowerShell instructions above are historical. In WSL, `export PATH="$HOME/.local/node/bin:$PATH"` first — Windows Node via interop silently runs npm scripts in `C:\Windows`. Linux Node 22 LTS is at `~/.local/node`.
+- **Vitest added**: `npm test` (vitest.config.ts, setup in `src/test/setup.ts`). Tests cover `src/lib/utils` and `src/data/loaders` + registry integrity.
+- **Agent workflow installed**: `/plan` → `/implement` → `/finish` project skills (`.claude/skills/`), subagents `frontend-developer`, `plan-critic`, `case-study-writer` (`.claude/agents/`). Compound-engineering plugin enabled (plans → `docs/plans/`, learnings → `docs/solutions/`, ADRs → `docs/decisions/`). Start with `CLAUDE.md` and `docs/CODEBASE_MAP.md`.
