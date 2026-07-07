@@ -47,8 +47,8 @@ export const aladdinCryptoScamNlp: Project = {
   ],
   links: [
     {
-      label: 'GitHub Profile',
-      href: 'https://github.com/Emax25'
+      label: 'Project Write-Up',
+      href: 'https://github.com/minalee-research/cs257-students/wiki/Aladdin:-Predicting-Cryptocurrency-Scams-and-Rug-Pulls-Using-Marketing-Tweets'
     }
   ]
 };

@@ -53,11 +53,5 @@ export const intradayTradingSystem: Project = {
       xAxisLabel: 'Return (%)',
       yAxisLabel: 'Frequency'
     }
-  ],
-  links: [
-    {
-      label: 'GitHub Profile',
-      href: 'https://github.com/Emax25'
-    }
   ]
 };

@@ -49,8 +49,8 @@ export const pmcmcInsiderDetection: Project = {
   ],
   links: [
     {
-      label: 'GitHub Profile',
-      href: 'https://github.com/Emax25'
+      label: 'Code',
+      href: 'https://github.com/Emax25/PMCMC---Polymarket'
     }
   ]
 };
