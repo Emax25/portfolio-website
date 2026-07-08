@@ -21,6 +21,29 @@ describe('getChartData', () => {
   })
 })
 
+describe('pmcmc-posterior real data', () => {
+  it('is real data, not illustrative', () => {
+    const dataset = getChartData('pmcmc-posterior')
+    expect(dataset.illustrative).toBe(false)
+  })
+
+  it('is downsampled to at most 200 rows and non-empty', () => {
+    const dataset = getChartData('pmcmc-posterior')
+    expect(dataset.data.length).toBeGreaterThan(0)
+    expect(dataset.data.length).toBeLessThanOrEqual(200)
+  })
+
+  it('every row has exactly iteration, suspiciousWallet, normalWallet as numbers', () => {
+    const dataset = getChartData('pmcmc-posterior')
+    for (const row of dataset.data) {
+      expect(Object.keys(row).sort()).toEqual(['iteration', 'normalWallet', 'suspiciousWallet'])
+      expect(typeof row.iteration).toBe('number')
+      expect(typeof row.suspiciousWallet).toBe('number')
+      expect(typeof row.normalWallet).toBe('number')
+    }
+  })
+})
+
 describe('projects registry integrity', () => {
   it('every chart dataSrc in every project resolves to a dataset', () => {
     for (const project of projectsRegistry) {

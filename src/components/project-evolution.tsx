@@ -1,13 +1,14 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import type { Project } from '@/content/types';
 
 interface ProjectEvolutionProps {
   retrospective?: Project['retrospective'];
   timeline?: Project['timeline'];
-  isReduced: boolean;
 }
 
-export function ProjectEvolution({ retrospective, timeline, isReduced }: ProjectEvolutionProps) {
+export function ProjectEvolution({ retrospective, timeline }: ProjectEvolutionProps) {
+  const isReduced = useReducedMotion();
+
   if (!retrospective && !timeline) {
     return null;
   }

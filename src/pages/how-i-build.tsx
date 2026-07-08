@@ -3,19 +3,12 @@ import { howIBuild } from '@/content/how-i-build';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { usePageTitle } from '@/lib/use-page-title';
+import { useEntranceAnimation } from '@/lib/use-entrance-animation';
 
 export function HowIBuild() {
   usePageTitle('How I Build');
 
-  const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const animationProps = isReduced
-    ? {}
-    : {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5 },
-      };
+  const animationProps = useEntranceAnimation();
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-5xl">

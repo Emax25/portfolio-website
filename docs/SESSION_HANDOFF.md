@@ -6,14 +6,14 @@
 
 | Item | Value |
 |------|--------|
-| **Production URL** | https://portfolio-website-xi-smoky-53.vercel.app/ |
+| **Production URL** | https://charlie-carvajal.vercel.app/ (renamed from `portfolio-website-xi-smoky-53`; old URL 404s — verified 2026-07-08) |
 | **GitHub repo** | https://github.com/Emax25/portfolio-website |
 | **Local app root** | `portfolio/` (inside workspace `Portfolio Website/`) |
 | **Default branch** | `master` |
 | **Hosting** | Vercel Hobby (free, personal/non-commercial) |
 | **Resume PDF** | `portfolio/public/resume.pdf` (copied from `Resume - Charlie Carvajal.pdf` in workspace root) |
 
-Vercel auto-deploys on push to `master`. Project name on Vercel may differ from repo name (user kept default `portfolio-website-*` subdomain rather than `charlie-carvajal.vercel.app`).
+Vercel auto-deploys on push to `master`. The Vercel project was renamed to `charlie-carvajal`, so the production subdomain is `charlie-carvajal.vercel.app` (superseding the earlier note about the auto-generated slug).
 
 ---
 
@@ -182,8 +182,7 @@ Overwrite `public/resume.pdf` (keep filename).
 
 ## Open / deferred items
 
-- Custom domain not configured (`.vercel.app` only).
-- Vercel project slug is auto-generated (`portfolio-website-xi-smoky-53`); can rename in Vercel project settings to get `charlie-carvajal.vercel.app` if desired.
+- Custom domain not configured (`.vercel.app` only; owner decided against purchasing one for the July 2026 launch).
 - `PROJECT_CONTEXT.md` §9 "Open Questions" still has stale unchecked items — plan decisions were resolved in the plan file, not all synced back to PROJECT_CONTEXT.
 - GitHub repo links on case studies point to `https://github.com/Emax25` (profile), not per-repo URLs — intentional placeholder until owner adds real repo links.
 
@@ -204,3 +203,14 @@ Overwrite `public/resume.pdf` (keep filename).
 - **Dev environment moved to WSL** (`/home/carvachar/portfolio-website`). The PowerShell instructions above are historical. In WSL, `export PATH="$HOME/.local/node/bin:$PATH"` first — Windows Node via interop silently runs npm scripts in `C:\Windows`. Linux Node 22 LTS is at `~/.local/node`.
 - **Vitest added**: `npm test` (vitest.config.ts, setup in `src/test/setup.ts`). Tests cover `src/lib/utils` and `src/data/loaders` + registry integrity.
 - **Agent workflow installed**: `/plan` → `/implement` → `/finish` project skills (`.claude/skills/`), subagents `frontend-developer`, `plan-critic`, `case-study-writer` (`.claude/agents/`). Compound-engineering plugin enabled (plans → `docs/plans/`, learnings → `docs/solutions/`, ADRs → `docs/decisions/`). Start with `CLAUDE.md` and `docs/CODEBASE_MAP.md`.
+
+---
+
+## Addendum — 2026-07-08: feature/evolution-pages finished (`/finish` run)
+
+- **State**: the 2026-07-06 plan (`docs/plans/2026-07-06-portfolio-feature-set.md`) is fully implemented (T0–T17). Branch `feature/evolution-pages` passed the full gate (vitest 21/21, tsc, oxlint, build) after a simplify + multi-agent review pass.
+- **On the branch, NOT merged**: new `/journey` + `/how-i-build` lazy pages, hybrid hash+route nav, Active Development badge + Project Evolution section (PMCMC), per-route titles, OG/canonical/JSON-LD/sitemap/analytics, B.S. coursework badges. Content modules still carry visible `[PLACEHOLDER — owner copy pending]` markers by design — **merge to `master` only after the owner replaces or approves the placeholder copy** (implementation protocol in the plan).
+- **On `master`, awaiting owner push**: real PMCMC posterior data (`e293c6`-era commits) — push from `master` was permission-denied for the agent; owner must `git push`.
+- **New shared helpers**: `src/lib/use-page-title.ts`, `src/lib/use-entrance-animation.ts`, `src/components/active-development-badge.tsx`, `src/components/project-evolution.tsx`.
+- **ADRs**: `docs/decisions/0001`–`0003` (hybrid nav, SPA-only OG/meta limitation, gitignore for personal source documents).
+- Known lint noise now includes a third fast-refresh warning (`badge.tsx`) alongside button/theme-provider.

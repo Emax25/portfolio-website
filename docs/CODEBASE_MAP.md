@@ -2,29 +2,32 @@
 
 > Agent reference for this repo. `/plan` reads this **instead of scanning `src/`**.
 > Maintained by `/finish` (update the affected section whenever structure, routes,
-> content conventions, or tooling change). Generated 2026-07-06.
+> content conventions, or tooling change). Generated 2026-07-06; updated 2026-07-08.
 
 ## Architecture & Routing
 
 ### Directory layout
-- **src/pages/** — route page components (Home, ProjectDetail, NotFound)
+- **src/pages/** — route page components (Home, ProjectDetail, Journey, HowIBuild, NotFound)
 - **src/components/**
   - `ui/` — shadcn/ui primitives (Card, Badge, Button, Sheet, Dropdown, Separator)
   - `sections/` — Home-only sections (Hero, About, Skills, Projects, Experience, Education, Contact)
   - `charts/` — lazy-loaded charts (EquityCurveChart, ReturnsDistributionChart, PosteriorProbabilityChart, ConfusionMatrixChart)
-  - core: `layout-shell.tsx`, `root-layout.tsx`, `theme-provider.tsx`
-- **src/content/** — typed content layer: `types.ts` (interfaces), `projects/` (registry). Source of truth for all copy — no hardcoded strings in components; facts trace to `PROJECT_CONTEXT.md`.
+  - core: `layout-shell.tsx`, `root-layout.tsx`, `theme-provider.tsx`, `project-evolution.tsx` (retrospective + timeline section), `active-development-badge.tsx`
+- **src/content/** — typed content layer: `types.ts` (interfaces), `projects/` (registry), page modules (`how-i-build.ts`, `journey.ts`, `profile.ts` incl. `aboutCards`). Source of truth for all copy — no hardcoded owner copy/facts in components (structural section headings are literals by convention); facts trace to `PROJECT_CONTEXT.md`.
 - **src/data/** — static chart data (JSON) + `loaders.ts`
-- **src/lib/** — utility helpers (`utils.ts`: `cn`)
+- **src/lib/** — utility helpers (`utils.ts`: `cn`; `use-page-title.ts`: per-route document titles; `use-entrance-animation.ts`: reduced-motion-aware page entrance props)
 
 ### Routing (React Router v7)
 - `/` → Home (7 sections, hash-based scroll nav: `/#projects`, `/#about`, …)
 - `/projects/:slug` → ProjectDetail (lazy-loaded; 404 if slug not in registry)
+- `/journey`, `/how-i-build` → lazy-loaded standalone pages rendering `src/content/journey.ts` / `how-i-build.ts`
 - `*` → NotFound
-- Tree: BrowserRouter → ThemeProvider → RootLayout (Outlet + LayoutShell)
+- Tree: BrowserRouter → ThemeProvider → RootLayout (Outlet + LayoutShell); `<Analytics />` (@vercel/analytics) mounted in App
+- Nav is a hybrid discriminated union in `layout-shell.tsx`: `kind:'hash'` items scroll/navigate to `/#id`; `kind:'route'` items are `<Link>`s that bypass the hash click handler (see ADR 0001)
+- Per-route tab titles via `usePageTitle` (`src/lib/use-page-title.ts`)
 
 ### Lazy-loading / code-splitting
-- ProjectDetail via `React.lazy()` + Suspense skeleton
+- ProjectDetail, Journey, HowIBuild via `React.lazy()` + Suspense skeleton
 - Each chart is its own chunk, lazy-loaded in `ProjectChart.tsx`
 - `useNearViewport` hook (IntersectionObserver) defers chart mount/download until ~200px above viewport
 
@@ -41,8 +44,8 @@
 
 ## Content, Data & Charts
 
-- **Case studies**: TypeScript objects in `src/content/projects/` implementing `Project`. Three exist: `intraday-trading-system`, `aladdin-crypto-scam-nlp`, `pmcmc-insider-detection`. Each holds metadata (slug, title, year, tags), narrative (problem[], approach[], results[]), key metrics, and a `charts` array referencing data by `dataSrc`.
-- **Data files**: `src/data/*.json`, shape `{ illustrative: boolean, data: T[] }`. Typed interfaces in `loaders.ts` (`EquityPoint`, `DistributionPoint`, `PosteriorPoint`, `ConfusionPoint`). `illustrative: true` renders an "Illustrative Data" badge — set `false` only for real results.
+- **Case studies**: TypeScript objects in `src/content/projects/` implementing `Project`. Three exist: `intraday-trading-system`, `aladdin-crypto-scam-nlp`, `pmcmc-insider-detection`. Each holds metadata (slug, title, year, tags), narrative (problem[], approach[], results[]), key metrics, and a `charts` array referencing data by `dataSrc`. Optional evolution fields: `status: 'active'` renders an Active Development badge (card + detail hero); `retrospective`/`timeline` render the Project Evolution section on the detail page.
+- **Data files**: `src/data/*.json`, shape `{ illustrative: boolean, data: T[] }`. Typed interfaces in `loaders.ts` (`EquityPoint`, `DistributionPoint`, `PosteriorPoint`, `ConfusionPoint`). `illustrative: true` renders an "Illustrative Data" badge — set `false` only for real results. `pmcmc-posterior.json` holds **real** posterior traces (anonymized keys, downsampled to 200 points; extraction documented in the 2026-07-06 plan); the other three remain illustrative.
 - **Chart libraries**: lightweight-charts v5 for finance time-series (EquityCurveChart, AreaSeries, theme-aware, ResizeObserver); Recharts v3 for declarative charts (distribution, line, confusion matrix) via ResponsiveContainer. `ChartContainer.tsx` is the Card wrapper with the illustrative badge.
 - **Adding a case study**: (1) `src/content/projects/<slug>.ts`; (2) export in `index.ts`; (3) `src/data/<dataSrc>.json`; (4) loader fn + case in `getChartData()`; (5) `ChartSpec` entry in the project's charts array; (6) new chart component only if no existing `ChartKind` fits, plus routing in `ProjectChart.tsx`.
 
@@ -53,6 +56,7 @@
 - **Styling**: Tailwind v4, no config file — theme in `src/index.css` via `@theme inline` (oklch tokens, light/dark scales, radius, chart color vars). Geist Variable font. Dark mode: class-based `.dark`, localStorage-backed, anti-FOUT inline script in `index.html`.
 - **shadcn/ui v4 on `@base-ui/react`** — no `asChild`; use `render={...}`.
 - **Lint**: oxlint (react, typescript, oxc plugins); `react/rules-of-hooks` = error.
-- **Deploy**: Vercel Hobby, auto-deploy on push to `master`; `vercel.json` has one SPA rewrite (`/(.*) → /index.html`). Prod: https://portfolio-website-xi-smoky-53.vercel.app/
+- **Deploy**: Vercel Hobby, auto-deploy on push to `master`; `vercel.json` has one SPA rewrite (`/(.*) → /index.html`). Prod: https://charlie-carvajal.vercel.app/ (project renamed from `portfolio-website-xi-smoky-53`; old URL 404s)
+- **SEO/meta**: `index.html` carries canonical, OG/Twitter card (`public/og-image.png`, 1200×630), and JSON-LD Person (facts from `profile.ts`/`education.ts`); `public/sitemap.xml` must list every route — a test (`src/content/sitemap.test.ts`) enforces registry↔sitemap sync. SPA limitation: all routes unfurl as the home card (ADR 0002).
 - **Performance baseline**: Lighthouse home 96 perf / 100 a11y — don't regress; keep charts below the fold lazy.
 - **Resume**: replace `public/resume.pdf` in place (filename preserved).

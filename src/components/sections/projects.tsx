@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { buttonVariants } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { ActiveDevelopmentBadge } from '@/components/active-development-badge';
 import { projectsRegistry } from '@/content/projects';
 
 export function ProjectsSection() {
@@ -47,10 +48,7 @@ export function ProjectsSection() {
                     {project.title}
                   </CardTitle>
                   {project.status === 'active' && (
-                    <Badge variant="outline" className="w-fit gap-1.5 text-[10px] text-muted-foreground">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary motion-safe:animate-pulse" aria-hidden="true" />
-                      <span>Active Development</span>
-                    </Badge>
+                    <ActiveDevelopmentBadge className="w-fit text-[10px] text-muted-foreground" />
                   )}
                 </CardHeader>
                 <CardContent className="space-y-4">
