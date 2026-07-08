@@ -31,6 +31,20 @@ export const education: EducationEntry[] = [
     degree: 'B.S. in Astrophysics & B.S. in Computer Science',
     location: 'Chicago, IL',
     endDate: 'Conferred Jun 2025',
+    courses: [
+      'Mathematical Foundations of Machine Learning',
+      'Neural Networks',
+      'Natural Language Processing',
+      'Adversarial Machine Learning',
+      'Machine Learning for Computer Systems',
+      'Statistical Models and Methods',
+      'Theory of Algorithms',
+      'Discrete Mathematics',
+      'Honors Combinatorics',
+      'Database Systems',
+      'Computer Architecture',
+      'Mathematical Methods in the Physical Sciences I–III'
+    ],
     details: [
       'Computer Science degree with a Machine Learning specialization.'
     ]

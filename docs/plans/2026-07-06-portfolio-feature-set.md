@@ -41,8 +41,8 @@ branch: feature/evolution-pages
 **Done 2026-07-08 (owner authorized extraction in conversation):**
 - [x] **T16** real PMCMC data — unpickled `results/chains/pg_halfprod.pkl` inside a scratchpad clone of the PMCMC repo (`theta_w`: 1500 iterations × 15,528 wallets; pure deserialization, no sampler runs). Exported 200 downsampled points, top wallet vs. low-posterior wallet (post-burn-in means match the ranking CSV to 10+ digits); no wallet ids/addresses in `src/data/`; `illustrative: false` flipped. Also added `/results/` to master's `.gitignore` (was branch-only; `results/` holds real addresses + a 488 MB pickle). Committed on `master` as `e293cd6`, merged into this branch — **push of `master` to origin was permission-denied (production deploy); owner must `git push` from master or grant the permission.**
 
-**In progress:**
-- [ ] **T17** B.S. coursework — transcript provided in conversation 2026-07-08 (PDF attachment; never committed). Curated list presented to owner — awaiting approval before editing `education.ts`.
+**Done 2026-07-08:**
+- [x] **T17** B.S. coursework — transcript provided in conversation (PDF attachment; never committed — gitignore guard live). 12 courses curated, owner-approved with one swap (Systems Programming I & II → Statistical Models and Methods; owner confirmed the repeat-no-credit was an elective-overlap artifact and the class was passed). Added `courses:` to the `uchicago-ugrad` entry in `education.ts`; badges render automatically.
 
 **Environment note:** WSL now has userland Node 24.18.0 at `~/.local/opt/node-v24.18.0-linux-x64/bin` (on PATH via `.bashrc`); `node_modules` reinstalled with Linux natives — a Windows-side build would need `npm install` again. Git push uses the Windows credential manager (configured in repo git config).
 
