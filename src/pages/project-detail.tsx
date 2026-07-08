@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProjectChart } from '@/components/charts/ProjectChart';
+import { ProjectEvolution } from '@/components/project-evolution';
 import { usePageTitle } from '@/lib/use-page-title';
 
 export function ProjectDetail() {
@@ -57,9 +58,17 @@ export function ProjectDetail() {
         <div className="space-y-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight">{project.title}</h1>
-            <span className="text-sm font-semibold text-muted-foreground bg-muted border border-border/50 px-3.5 py-1.5 rounded-full w-fit">
-              {project.year}
-            </span>
+            <div className="flex items-center gap-2">
+              {project.status === 'active' && (
+                <Badge variant="outline" className="gap-1.5 text-xs px-3 py-1.5 h-auto">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary motion-safe:animate-pulse" aria-hidden="true" />
+                  <span>Active Development</span>
+                </Badge>
+              )}
+              <span className="text-sm font-semibold text-muted-foreground bg-muted border border-border/50 px-3.5 py-1.5 rounded-full w-fit">
+                {project.year}
+              </span>
+            </div>
           </div>
 
           {/* Tags */}
@@ -127,6 +136,15 @@ export function ProjectDetail() {
             </div>
           </section>
         </div>
+
+        {/* Project Evolution Section */}
+        {(project.retrospective || project.timeline) && (
+          <ProjectEvolution
+            retrospective={project.retrospective}
+            timeline={project.timeline}
+            isReduced={isReduced}
+          />
+        )}
 
         {/* Visualizations Section */}
         {project.charts && project.charts.length > 0 && (

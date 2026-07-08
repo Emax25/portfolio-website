@@ -46,6 +46,12 @@ export function ProjectsSection() {
                   <CardTitle className="text-xl font-bold text-foreground mt-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </CardTitle>
+                  {project.status === 'active' && (
+                    <Badge variant="outline" className="w-fit gap-1.5 text-[10px] text-muted-foreground">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary motion-safe:animate-pulse" aria-hidden="true" />
+                      <span>Active Development</span>
+                    </Badge>
+                  )}
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
