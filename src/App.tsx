@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '@/components/theme-provider';
 import { RootLayout } from '@/components/root-layout';
 import { Home } from '@/pages/home';
@@ -42,6 +43,7 @@ function LoadingFallback() {
 function App() {
   return (
     <ThemeProvider>
+      <Analytics />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RootLayout />}>
