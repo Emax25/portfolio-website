@@ -1,26 +1,1005 @@
 {
-  "illustrative": true,
+  "illustrative": false,
   "data": [
-    { "iteration": 0, "suspiciousWallet": 0.10, "normalWallet": 0.10 },
-    { "iteration": 50, "suspiciousWallet": 0.28, "normalWallet": 0.08 },
-    { "iteration": 100, "suspiciousWallet": 0.45, "normalWallet": 0.05 },
-    { "iteration": 150, "suspiciousWallet": 0.62, "normalWallet": 0.03 },
-    { "iteration": 200, "suspiciousWallet": 0.75, "normalWallet": 0.02 },
-    { "iteration": 250, "suspiciousWallet": 0.81, "normalWallet": 0.01 },
-    { "iteration": 300, "suspiciousWallet": 0.85, "normalWallet": 0.02 },
-    { "iteration": 350, "suspiciousWallet": 0.87, "normalWallet": 0.01 },
-    { "iteration": 400, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
-    { "iteration": 450, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
-    { "iteration": 500, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
-    { "iteration": 550, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
-    { "iteration": 600, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
-    { "iteration": 650, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
-    { "iteration": 700, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
-    { "iteration": 750, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
-    { "iteration": 800, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
-    { "iteration": 850, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
-    { "iteration": 900, "suspiciousWallet": 0.88, "normalWallet": 0.02 },
-    { "iteration": 950, "suspiciousWallet": 0.88, "normalWallet": 0.01 },
-    { "iteration": 1000, "suspiciousWallet": 0.88, "normalWallet": 0.02 }
+    {
+      "iteration": 0,
+      "suspiciousWallet": 0.547168,
+      "normalWallet": 0.091335
+    },
+    {
+      "iteration": 8,
+      "suspiciousWallet": 0.89724,
+      "normalWallet": 0.19084
+    },
+    {
+      "iteration": 15,
+      "suspiciousWallet": 0.894405,
+      "normalWallet": 0.229356
+    },
+    {
+      "iteration": 23,
+      "suspiciousWallet": 0.875697,
+      "normalWallet": 0.262011
+    },
+    {
+      "iteration": 30,
+      "suspiciousWallet": 0.871626,
+      "normalWallet": 0.208714
+    },
+    {
+      "iteration": 38,
+      "suspiciousWallet": 0.870392,
+      "normalWallet": 0.197657
+    },
+    {
+      "iteration": 45,
+      "suspiciousWallet": 0.880551,
+      "normalWallet": 0.16192
+    },
+    {
+      "iteration": 53,
+      "suspiciousWallet": 0.863029,
+      "normalWallet": 0.206089
+    },
+    {
+      "iteration": 60,
+      "suspiciousWallet": 0.875598,
+      "normalWallet": 0.199122
+    },
+    {
+      "iteration": 68,
+      "suspiciousWallet": 0.859362,
+      "normalWallet": 0.145996
+    },
+    {
+      "iteration": 75,
+      "suspiciousWallet": 0.873272,
+      "normalWallet": 0.226627
+    },
+    {
+      "iteration": 83,
+      "suspiciousWallet": 0.872587,
+      "normalWallet": 0.240496
+    },
+    {
+      "iteration": 90,
+      "suspiciousWallet": 0.916312,
+      "normalWallet": 0.220341
+    },
+    {
+      "iteration": 98,
+      "suspiciousWallet": 0.883043,
+      "normalWallet": 0.203826
+    },
+    {
+      "iteration": 105,
+      "suspiciousWallet": 0.870647,
+      "normalWallet": 0.224607
+    },
+    {
+      "iteration": 113,
+      "suspiciousWallet": 0.876177,
+      "normalWallet": 0.247714
+    },
+    {
+      "iteration": 121,
+      "suspiciousWallet": 0.875566,
+      "normalWallet": 0.266839
+    },
+    {
+      "iteration": 128,
+      "suspiciousWallet": 0.899874,
+      "normalWallet": 0.244956
+    },
+    {
+      "iteration": 136,
+      "suspiciousWallet": 0.895486,
+      "normalWallet": 0.184538
+    },
+    {
+      "iteration": 143,
+      "suspiciousWallet": 0.898217,
+      "normalWallet": 0.251962
+    },
+    {
+      "iteration": 151,
+      "suspiciousWallet": 0.89115,
+      "normalWallet": 0.236181
+    },
+    {
+      "iteration": 158,
+      "suspiciousWallet": 0.878148,
+      "normalWallet": 0.203469
+    },
+    {
+      "iteration": 166,
+      "suspiciousWallet": 0.91195,
+      "normalWallet": 0.134412
+    },
+    {
+      "iteration": 173,
+      "suspiciousWallet": 0.889395,
+      "normalWallet": 0.238771
+    },
+    {
+      "iteration": 181,
+      "suspiciousWallet": 0.868427,
+      "normalWallet": 0.22132
+    },
+    {
+      "iteration": 188,
+      "suspiciousWallet": 0.87469,
+      "normalWallet": 0.286285
+    },
+    {
+      "iteration": 196,
+      "suspiciousWallet": 0.908398,
+      "normalWallet": 0.142999
+    },
+    {
+      "iteration": 203,
+      "suspiciousWallet": 0.875508,
+      "normalWallet": 0.187902
+    },
+    {
+      "iteration": 211,
+      "suspiciousWallet": 0.880731,
+      "normalWallet": 0.192063
+    },
+    {
+      "iteration": 218,
+      "suspiciousWallet": 0.910452,
+      "normalWallet": 0.203752
+    },
+    {
+      "iteration": 226,
+      "suspiciousWallet": 0.881135,
+      "normalWallet": 0.188272
+    },
+    {
+      "iteration": 234,
+      "suspiciousWallet": 0.881203,
+      "normalWallet": 0.267161
+    },
+    {
+      "iteration": 241,
+      "suspiciousWallet": 0.88241,
+      "normalWallet": 0.140824
+    },
+    {
+      "iteration": 249,
+      "suspiciousWallet": 0.864008,
+      "normalWallet": 0.182187
+    },
+    {
+      "iteration": 256,
+      "suspiciousWallet": 0.91214,
+      "normalWallet": 0.214154
+    },
+    {
+      "iteration": 264,
+      "suspiciousWallet": 0.89515,
+      "normalWallet": 0.227051
+    },
+    {
+      "iteration": 271,
+      "suspiciousWallet": 0.883769,
+      "normalWallet": 0.182925
+    },
+    {
+      "iteration": 279,
+      "suspiciousWallet": 0.896911,
+      "normalWallet": 0.249442
+    },
+    {
+      "iteration": 286,
+      "suspiciousWallet": 0.88898,
+      "normalWallet": 0.148804
+    },
+    {
+      "iteration": 294,
+      "suspiciousWallet": 0.878497,
+      "normalWallet": 0.246862
+    },
+    {
+      "iteration": 301,
+      "suspiciousWallet": 0.894132,
+      "normalWallet": 0.19777
+    },
+    {
+      "iteration": 309,
+      "suspiciousWallet": 0.884904,
+      "normalWallet": 0.222868
+    },
+    {
+      "iteration": 316,
+      "suspiciousWallet": 0.885068,
+      "normalWallet": 0.271687
+    },
+    {
+      "iteration": 324,
+      "suspiciousWallet": 0.885702,
+      "normalWallet": 0.271787
+    },
+    {
+      "iteration": 331,
+      "suspiciousWallet": 0.898208,
+      "normalWallet": 0.135894
+    },
+    {
+      "iteration": 339,
+      "suspiciousWallet": 0.880155,
+      "normalWallet": 0.291242
+    },
+    {
+      "iteration": 347,
+      "suspiciousWallet": 0.876086,
+      "normalWallet": 0.159454
+    },
+    {
+      "iteration": 354,
+      "suspiciousWallet": 0.899705,
+      "normalWallet": 0.22661
+    },
+    {
+      "iteration": 362,
+      "suspiciousWallet": 0.891638,
+      "normalWallet": 0.326567
+    },
+    {
+      "iteration": 369,
+      "suspiciousWallet": 0.883716,
+      "normalWallet": 0.145889
+    },
+    {
+      "iteration": 377,
+      "suspiciousWallet": 0.887559,
+      "normalWallet": 0.286103
+    },
+    {
+      "iteration": 384,
+      "suspiciousWallet": 0.896721,
+      "normalWallet": 0.171939
+    },
+    {
+      "iteration": 392,
+      "suspiciousWallet": 0.891532,
+      "normalWallet": 0.219455
+    },
+    {
+      "iteration": 399,
+      "suspiciousWallet": 0.903499,
+      "normalWallet": 0.228138
+    },
+    {
+      "iteration": 407,
+      "suspiciousWallet": 0.876076,
+      "normalWallet": 0.295214
+    },
+    {
+      "iteration": 414,
+      "suspiciousWallet": 0.865939,
+      "normalWallet": 0.19945
+    },
+    {
+      "iteration": 422,
+      "suspiciousWallet": 0.876333,
+      "normalWallet": 0.151405
+    },
+    {
+      "iteration": 429,
+      "suspiciousWallet": 0.87688,
+      "normalWallet": 0.262888
+    },
+    {
+      "iteration": 437,
+      "suspiciousWallet": 0.883917,
+      "normalWallet": 0.189309
+    },
+    {
+      "iteration": 444,
+      "suspiciousWallet": 0.873999,
+      "normalWallet": 0.107938
+    },
+    {
+      "iteration": 452,
+      "suspiciousWallet": 0.912687,
+      "normalWallet": 0.169772
+    },
+    {
+      "iteration": 459,
+      "suspiciousWallet": 0.849189,
+      "normalWallet": 0.176255
+    },
+    {
+      "iteration": 467,
+      "suspiciousWallet": 0.890337,
+      "normalWallet": 0.191745
+    },
+    {
+      "iteration": 475,
+      "suspiciousWallet": 0.903385,
+      "normalWallet": 0.147176
+    },
+    {
+      "iteration": 482,
+      "suspiciousWallet": 0.867234,
+      "normalWallet": 0.22602
+    },
+    {
+      "iteration": 490,
+      "suspiciousWallet": 0.8853,
+      "normalWallet": 0.282742
+    },
+    {
+      "iteration": 497,
+      "suspiciousWallet": 0.90215,
+      "normalWallet": 0.17236
+    },
+    {
+      "iteration": 505,
+      "suspiciousWallet": 0.870463,
+      "normalWallet": 0.194226
+    },
+    {
+      "iteration": 512,
+      "suspiciousWallet": 0.897358,
+      "normalWallet": 0.219724
+    },
+    {
+      "iteration": 520,
+      "suspiciousWallet": 0.90601,
+      "normalWallet": 0.161112
+    },
+    {
+      "iteration": 527,
+      "suspiciousWallet": 0.891589,
+      "normalWallet": 0.258278
+    },
+    {
+      "iteration": 535,
+      "suspiciousWallet": 0.855831,
+      "normalWallet": 0.303221
+    },
+    {
+      "iteration": 542,
+      "suspiciousWallet": 0.885458,
+      "normalWallet": 0.211669
+    },
+    {
+      "iteration": 550,
+      "suspiciousWallet": 0.890376,
+      "normalWallet": 0.21225
+    },
+    {
+      "iteration": 557,
+      "suspiciousWallet": 0.885389,
+      "normalWallet": 0.161404
+    },
+    {
+      "iteration": 565,
+      "suspiciousWallet": 0.872091,
+      "normalWallet": 0.199275
+    },
+    {
+      "iteration": 572,
+      "suspiciousWallet": 0.873131,
+      "normalWallet": 0.191846
+    },
+    {
+      "iteration": 580,
+      "suspiciousWallet": 0.865127,
+      "normalWallet": 0.317702
+    },
+    {
+      "iteration": 588,
+      "suspiciousWallet": 0.90993,
+      "normalWallet": 0.154625
+    },
+    {
+      "iteration": 595,
+      "suspiciousWallet": 0.902729,
+      "normalWallet": 0.229813
+    },
+    {
+      "iteration": 603,
+      "suspiciousWallet": 0.880129,
+      "normalWallet": 0.192237
+    },
+    {
+      "iteration": 610,
+      "suspiciousWallet": 0.884005,
+      "normalWallet": 0.170484
+    },
+    {
+      "iteration": 618,
+      "suspiciousWallet": 0.868693,
+      "normalWallet": 0.236314
+    },
+    {
+      "iteration": 625,
+      "suspiciousWallet": 0.886014,
+      "normalWallet": 0.182799
+    },
+    {
+      "iteration": 633,
+      "suspiciousWallet": 0.86719,
+      "normalWallet": 0.256887
+    },
+    {
+      "iteration": 640,
+      "suspiciousWallet": 0.875895,
+      "normalWallet": 0.212175
+    },
+    {
+      "iteration": 648,
+      "suspiciousWallet": 0.90064,
+      "normalWallet": 0.25094
+    },
+    {
+      "iteration": 655,
+      "suspiciousWallet": 0.909282,
+      "normalWallet": 0.205318
+    },
+    {
+      "iteration": 663,
+      "suspiciousWallet": 0.84831,
+      "normalWallet": 0.244205
+    },
+    {
+      "iteration": 670,
+      "suspiciousWallet": 0.880964,
+      "normalWallet": 0.193769
+    },
+    {
+      "iteration": 678,
+      "suspiciousWallet": 0.861204,
+      "normalWallet": 0.216044
+    },
+    {
+      "iteration": 685,
+      "suspiciousWallet": 0.893365,
+      "normalWallet": 0.205376
+    },
+    {
+      "iteration": 693,
+      "suspiciousWallet": 0.919908,
+      "normalWallet": 0.270525
+    },
+    {
+      "iteration": 701,
+      "suspiciousWallet": 0.891481,
+      "normalWallet": 0.154352
+    },
+    {
+      "iteration": 708,
+      "suspiciousWallet": 0.885315,
+      "normalWallet": 0.241197
+    },
+    {
+      "iteration": 716,
+      "suspiciousWallet": 0.89592,
+      "normalWallet": 0.110504
+    },
+    {
+      "iteration": 723,
+      "suspiciousWallet": 0.87186,
+      "normalWallet": 0.262092
+    },
+    {
+      "iteration": 731,
+      "suspiciousWallet": 0.887702,
+      "normalWallet": 0.244589
+    },
+    {
+      "iteration": 738,
+      "suspiciousWallet": 0.895067,
+      "normalWallet": 0.218611
+    },
+    {
+      "iteration": 746,
+      "suspiciousWallet": 0.88428,
+      "normalWallet": 0.23398
+    },
+    {
+      "iteration": 753,
+      "suspiciousWallet": 0.894909,
+      "normalWallet": 0.179837
+    },
+    {
+      "iteration": 761,
+      "suspiciousWallet": 0.891206,
+      "normalWallet": 0.179409
+    },
+    {
+      "iteration": 768,
+      "suspiciousWallet": 0.873769,
+      "normalWallet": 0.231956
+    },
+    {
+      "iteration": 776,
+      "suspiciousWallet": 0.881516,
+      "normalWallet": 0.213323
+    },
+    {
+      "iteration": 783,
+      "suspiciousWallet": 0.858342,
+      "normalWallet": 0.152617
+    },
+    {
+      "iteration": 791,
+      "suspiciousWallet": 0.896325,
+      "normalWallet": 0.206977
+    },
+    {
+      "iteration": 798,
+      "suspiciousWallet": 0.873918,
+      "normalWallet": 0.273095
+    },
+    {
+      "iteration": 806,
+      "suspiciousWallet": 0.884383,
+      "normalWallet": 0.19609
+    },
+    {
+      "iteration": 814,
+      "suspiciousWallet": 0.903196,
+      "normalWallet": 0.287436
+    },
+    {
+      "iteration": 821,
+      "suspiciousWallet": 0.867309,
+      "normalWallet": 0.1947
+    },
+    {
+      "iteration": 829,
+      "suspiciousWallet": 0.887209,
+      "normalWallet": 0.13213
+    },
+    {
+      "iteration": 836,
+      "suspiciousWallet": 0.891628,
+      "normalWallet": 0.219907
+    },
+    {
+      "iteration": 844,
+      "suspiciousWallet": 0.890366,
+      "normalWallet": 0.283109
+    },
+    {
+      "iteration": 851,
+      "suspiciousWallet": 0.860019,
+      "normalWallet": 0.185473
+    },
+    {
+      "iteration": 859,
+      "suspiciousWallet": 0.888013,
+      "normalWallet": 0.27814
+    },
+    {
+      "iteration": 866,
+      "suspiciousWallet": 0.874555,
+      "normalWallet": 0.225271
+    },
+    {
+      "iteration": 874,
+      "suspiciousWallet": 0.872953,
+      "normalWallet": 0.174955
+    },
+    {
+      "iteration": 881,
+      "suspiciousWallet": 0.887108,
+      "normalWallet": 0.169354
+    },
+    {
+      "iteration": 889,
+      "suspiciousWallet": 0.880054,
+      "normalWallet": 0.24
+    },
+    {
+      "iteration": 896,
+      "suspiciousWallet": 0.883913,
+      "normalWallet": 0.207145
+    },
+    {
+      "iteration": 904,
+      "suspiciousWallet": 0.89809,
+      "normalWallet": 0.188589
+    },
+    {
+      "iteration": 911,
+      "suspiciousWallet": 0.887462,
+      "normalWallet": 0.235685
+    },
+    {
+      "iteration": 919,
+      "suspiciousWallet": 0.891481,
+      "normalWallet": 0.222914
+    },
+    {
+      "iteration": 927,
+      "suspiciousWallet": 0.877943,
+      "normalWallet": 0.213956
+    },
+    {
+      "iteration": 934,
+      "suspiciousWallet": 0.886042,
+      "normalWallet": 0.236482
+    },
+    {
+      "iteration": 942,
+      "suspiciousWallet": 0.902088,
+      "normalWallet": 0.214903
+    },
+    {
+      "iteration": 949,
+      "suspiciousWallet": 0.891028,
+      "normalWallet": 0.212706
+    },
+    {
+      "iteration": 957,
+      "suspiciousWallet": 0.874193,
+      "normalWallet": 0.219373
+    },
+    {
+      "iteration": 964,
+      "suspiciousWallet": 0.869914,
+      "normalWallet": 0.312894
+    },
+    {
+      "iteration": 972,
+      "suspiciousWallet": 0.862071,
+      "normalWallet": 0.192045
+    },
+    {
+      "iteration": 979,
+      "suspiciousWallet": 0.896738,
+      "normalWallet": 0.120763
+    },
+    {
+      "iteration": 987,
+      "suspiciousWallet": 0.883325,
+      "normalWallet": 0.192126
+    },
+    {
+      "iteration": 994,
+      "suspiciousWallet": 0.893722,
+      "normalWallet": 0.233817
+    },
+    {
+      "iteration": 1002,
+      "suspiciousWallet": 0.871848,
+      "normalWallet": 0.262069
+    },
+    {
+      "iteration": 1009,
+      "suspiciousWallet": 0.880455,
+      "normalWallet": 0.214376
+    },
+    {
+      "iteration": 1017,
+      "suspiciousWallet": 0.842987,
+      "normalWallet": 0.214096
+    },
+    {
+      "iteration": 1024,
+      "suspiciousWallet": 0.886272,
+      "normalWallet": 0.257819
+    },
+    {
+      "iteration": 1032,
+      "suspiciousWallet": 0.903162,
+      "normalWallet": 0.27267
+    },
+    {
+      "iteration": 1040,
+      "suspiciousWallet": 0.879974,
+      "normalWallet": 0.21978
+    },
+    {
+      "iteration": 1047,
+      "suspiciousWallet": 0.868197,
+      "normalWallet": 0.192571
+    },
+    {
+      "iteration": 1055,
+      "suspiciousWallet": 0.890547,
+      "normalWallet": 0.296537
+    },
+    {
+      "iteration": 1062,
+      "suspiciousWallet": 0.894249,
+      "normalWallet": 0.212986
+    },
+    {
+      "iteration": 1070,
+      "suspiciousWallet": 0.896224,
+      "normalWallet": 0.296009
+    },
+    {
+      "iteration": 1077,
+      "suspiciousWallet": 0.865504,
+      "normalWallet": 0.18399
+    },
+    {
+      "iteration": 1085,
+      "suspiciousWallet": 0.904968,
+      "normalWallet": 0.232073
+    },
+    {
+      "iteration": 1092,
+      "suspiciousWallet": 0.880977,
+      "normalWallet": 0.236967
+    },
+    {
+      "iteration": 1100,
+      "suspiciousWallet": 0.877335,
+      "normalWallet": 0.169537
+    },
+    {
+      "iteration": 1107,
+      "suspiciousWallet": 0.863783,
+      "normalWallet": 0.206595
+    },
+    {
+      "iteration": 1115,
+      "suspiciousWallet": 0.899552,
+      "normalWallet": 0.269361
+    },
+    {
+      "iteration": 1122,
+      "suspiciousWallet": 0.900494,
+      "normalWallet": 0.203677
+    },
+    {
+      "iteration": 1130,
+      "suspiciousWallet": 0.848223,
+      "normalWallet": 0.176527
+    },
+    {
+      "iteration": 1137,
+      "suspiciousWallet": 0.878236,
+      "normalWallet": 0.207901
+    },
+    {
+      "iteration": 1145,
+      "suspiciousWallet": 0.865087,
+      "normalWallet": 0.231867
+    },
+    {
+      "iteration": 1152,
+      "suspiciousWallet": 0.874136,
+      "normalWallet": 0.234277
+    },
+    {
+      "iteration": 1160,
+      "suspiciousWallet": 0.88114,
+      "normalWallet": 0.167118
+    },
+    {
+      "iteration": 1168,
+      "suspiciousWallet": 0.865131,
+      "normalWallet": 0.29283
+    },
+    {
+      "iteration": 1175,
+      "suspiciousWallet": 0.883017,
+      "normalWallet": 0.220998
+    },
+    {
+      "iteration": 1183,
+      "suspiciousWallet": 0.873774,
+      "normalWallet": 0.202515
+    },
+    {
+      "iteration": 1190,
+      "suspiciousWallet": 0.854003,
+      "normalWallet": 0.200368
+    },
+    {
+      "iteration": 1198,
+      "suspiciousWallet": 0.872002,
+      "normalWallet": 0.222043
+    },
+    {
+      "iteration": 1205,
+      "suspiciousWallet": 0.868094,
+      "normalWallet": 0.266313
+    },
+    {
+      "iteration": 1213,
+      "suspiciousWallet": 0.898894,
+      "normalWallet": 0.217946
+    },
+    {
+      "iteration": 1220,
+      "suspiciousWallet": 0.893657,
+      "normalWallet": 0.287533
+    },
+    {
+      "iteration": 1228,
+      "suspiciousWallet": 0.884552,
+      "normalWallet": 0.189333
+    },
+    {
+      "iteration": 1235,
+      "suspiciousWallet": 0.895601,
+      "normalWallet": 0.12428
+    },
+    {
+      "iteration": 1243,
+      "suspiciousWallet": 0.882483,
+      "normalWallet": 0.167856
+    },
+    {
+      "iteration": 1250,
+      "suspiciousWallet": 0.882613,
+      "normalWallet": 0.225901
+    },
+    {
+      "iteration": 1258,
+      "suspiciousWallet": 0.87595,
+      "normalWallet": 0.212041
+    },
+    {
+      "iteration": 1265,
+      "suspiciousWallet": 0.909485,
+      "normalWallet": 0.188003
+    },
+    {
+      "iteration": 1273,
+      "suspiciousWallet": 0.891367,
+      "normalWallet": 0.171982
+    },
+    {
+      "iteration": 1281,
+      "suspiciousWallet": 0.88786,
+      "normalWallet": 0.206304
+    },
+    {
+      "iteration": 1288,
+      "suspiciousWallet": 0.881249,
+      "normalWallet": 0.236533
+    },
+    {
+      "iteration": 1296,
+      "suspiciousWallet": 0.90372,
+      "normalWallet": 0.212834
+    },
+    {
+      "iteration": 1303,
+      "suspiciousWallet": 0.890447,
+      "normalWallet": 0.181847
+    },
+    {
+      "iteration": 1311,
+      "suspiciousWallet": 0.851264,
+      "normalWallet": 0.249728
+    },
+    {
+      "iteration": 1318,
+      "suspiciousWallet": 0.880009,
+      "normalWallet": 0.22059
+    },
+    {
+      "iteration": 1326,
+      "suspiciousWallet": 0.910529,
+      "normalWallet": 0.266522
+    },
+    {
+      "iteration": 1333,
+      "suspiciousWallet": 0.840177,
+      "normalWallet": 0.182737
+    },
+    {
+      "iteration": 1341,
+      "suspiciousWallet": 0.864332,
+      "normalWallet": 0.178866
+    },
+    {
+      "iteration": 1348,
+      "suspiciousWallet": 0.883034,
+      "normalWallet": 0.245998
+    },
+    {
+      "iteration": 1356,
+      "suspiciousWallet": 0.896474,
+      "normalWallet": 0.259696
+    },
+    {
+      "iteration": 1363,
+      "suspiciousWallet": 0.901912,
+      "normalWallet": 0.152118
+    },
+    {
+      "iteration": 1371,
+      "suspiciousWallet": 0.898162,
+      "normalWallet": 0.210016
+    },
+    {
+      "iteration": 1378,
+      "suspiciousWallet": 0.909745,
+      "normalWallet": 0.265411
+    },
+    {
+      "iteration": 1386,
+      "suspiciousWallet": 0.884258,
+      "normalWallet": 0.170651
+    },
+    {
+      "iteration": 1394,
+      "suspiciousWallet": 0.877338,
+      "normalWallet": 0.226417
+    },
+    {
+      "iteration": 1401,
+      "suspiciousWallet": 0.905493,
+      "normalWallet": 0.207238
+    },
+    {
+      "iteration": 1409,
+      "suspiciousWallet": 0.894137,
+      "normalWallet": 0.219174
+    },
+    {
+      "iteration": 1416,
+      "suspiciousWallet": 0.882104,
+      "normalWallet": 0.148611
+    },
+    {
+      "iteration": 1424,
+      "suspiciousWallet": 0.906789,
+      "normalWallet": 0.18871
+    },
+    {
+      "iteration": 1431,
+      "suspiciousWallet": 0.889407,
+      "normalWallet": 0.203778
+    },
+    {
+      "iteration": 1439,
+      "suspiciousWallet": 0.88254,
+      "normalWallet": 0.235946
+    },
+    {
+      "iteration": 1446,
+      "suspiciousWallet": 0.882674,
+      "normalWallet": 0.184847
+    },
+    {
+      "iteration": 1454,
+      "suspiciousWallet": 0.868242,
+      "normalWallet": 0.187674
+    },
+    {
+      "iteration": 1461,
+      "suspiciousWallet": 0.883743,
+      "normalWallet": 0.179374
+    },
+    {
+      "iteration": 1469,
+      "suspiciousWallet": 0.884103,
+      "normalWallet": 0.252916
+    },
+    {
+      "iteration": 1476,
+      "suspiciousWallet": 0.867634,
+      "normalWallet": 0.166986
+    },
+    {
+      "iteration": 1484,
+      "suspiciousWallet": 0.843451,
+      "normalWallet": 0.163143
+    },
+    {
+      "iteration": 1491,
+      "suspiciousWallet": 0.874239,
+      "normalWallet": 0.255678
+    },
+    {
+      "iteration": 1499,
+      "suspiciousWallet": 0.902486,
+      "normalWallet": 0.224708
+    }
   ]
 }

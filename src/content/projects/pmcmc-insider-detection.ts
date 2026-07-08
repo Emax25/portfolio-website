@@ -41,7 +41,7 @@ export const pmcmcInsiderDetection: Project = {
     {
       kind: 'line',
       dataSrc: 'pmcmc-posterior',
-      illustrative: true,
+      illustrative: false,
       title: 'Posterior Insider Probability over MCMC Iterations',
       xAxisLabel: 'Iteration',
       yAxisLabel: 'Probability'
