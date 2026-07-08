@@ -28,10 +28,18 @@ branch: feature/evolution-pages
 - [x] **T4c** content-rule cleanup: About cards + contact GitHub string + footer href now come from `src/content/`
 - Gates passed per task: `tsc -b --noEmit`, oxlint (only known fast-refresh warnings), vitest 6/6
 
-**Not started:** T5 (nav refactor), T6 (usePageTitle), T7 (/how-i-build page), T8 (/journey page), T9/T10 (evolution UI), T11-T14 (OG image, meta, JSON-LD/sitemap, analytics)
+**Done — on branch `feature/evolution-pages` (2026-07-07 /implement session), NOT pushed/deployed:**
+- [x] **T5** hybrid hash+route nav (discriminated union, width mitigations applied) — commit `a281af0`
+- [x] **T6** `usePageTitle` hook + jsdom tests, applied to home/project-detail/not-found — commit `a281af0`
+- [x] **T7** `/how-i-build` page, lazy route, separate chunk (~4.8 kB) — commit `dbaf0ac` (note: h1/"Toolchain"/"Workflow" headings are structural literals — `HowIBuildContent` type has no heading fields for them)
+- [x] **T8** `/journey` page, lazy route, About "Read my full journey →" link — commit `e66ee89`
+- [x] **T9/T10** Active Development badges (motion-safe pulse) + Project Evolution section (`src/components/project-evolution.tsx`, ol/time semantics, reduced-motion safe) — commit `258757a`
+- [x] **T11** `public/og-image.png` 1200×630, ~46 KB, visually verified — commit `c02c212`
+- [x] **T12/T13/T14** canonical + og:url/og:image + twitter large card; JSON-LD Person (all facts from profile.ts/education.ts; alumniOf deduped — both degrees are UChicago, one entry); sitemap.xml (6 URLs) + robots Sitemap line; `@vercel/analytics` + `<Analytics />` in App.tsx — commit `15f0584`
+- Gates per task: `tsc -b --noEmit` clean, oxlint (3 known fast-refresh warnings — badge.tsx joined the known button/theme-provider pair, pre-existing), vitest 9/9, build chunks verified
 
-**Unblocked 2026-07-07:**
-- [ ] **T16** real PMCMC data — owner dropped `results/` (gitignored): `tables/pg_wallet_ranking.csv` (posteriors + CIs, real) and `chains/*.pkl` (iteration traces, unpicklable only inside the PMCMC codebase). Extraction paths defined in T16 below.
+**Blocked 2026-07-07 (needs owner action):**
+- [ ] **T16** real PMCMC data — extraction inputs ready in `results/` but the auto-mode permission classifier denied the required step (cloning the PMCMC repo + unpickling chains executes external code, which "implement the plan" doesn't specifically authorize). Owner options: (a) re-run T16 in an interactive session and approve the clone/unpickle prompts, (b) pre-approve via a Bash permission rule, or (c) run the extraction themselves and drop the JSON (schema: `{"illustrative": false, "data": [{iteration, suspiciousWallet, normalWallet}]}`, ≤200 points, no wallet addresses) — then flip `illustrative` in `pmcmc-insider-detection.ts` and it merges straight to `master` per protocol.
 
 **Blocked on owner:**
 - [ ] **T17** B.S. coursework — transcript PDF not yet dropped at repo root
