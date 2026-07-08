@@ -38,11 +38,11 @@ branch: feature/evolution-pages
 - [x] **T12/T13/T14** canonical + og:url/og:image + twitter large card; JSON-LD Person (all facts from profile.ts/education.ts; alumniOf deduped — both degrees are UChicago, one entry); sitemap.xml (6 URLs) + robots Sitemap line; `@vercel/analytics` + `<Analytics />` in App.tsx — commit `15f0584`
 - Gates per task: `tsc -b --noEmit` clean, oxlint (3 known fast-refresh warnings — badge.tsx joined the known button/theme-provider pair, pre-existing), vitest 9/9, build chunks verified
 
-**Blocked 2026-07-07 (needs owner action):**
-- [ ] **T16** real PMCMC data — extraction inputs ready in `results/` but the auto-mode permission classifier denied the required step (cloning the PMCMC repo + unpickling chains executes external code, which "implement the plan" doesn't specifically authorize). Owner options: (a) re-run T16 in an interactive session and approve the clone/unpickle prompts, (b) pre-approve via a Bash permission rule, or (c) run the extraction themselves and drop the JSON (schema: `{"illustrative": false, "data": [{iteration, suspiciousWallet, normalWallet}]}`, ≤200 points, no wallet addresses) — then flip `illustrative` in `pmcmc-insider-detection.ts` and it merges straight to `master` per protocol.
+**Done 2026-07-08 (owner authorized extraction in conversation):**
+- [x] **T16** real PMCMC data — unpickled `results/chains/pg_halfprod.pkl` inside a scratchpad clone of the PMCMC repo (`theta_w`: 1500 iterations × 15,528 wallets; pure deserialization, no sampler runs). Exported 200 downsampled points, top wallet vs. low-posterior wallet (post-burn-in means match the ranking CSV to 10+ digits); no wallet ids/addresses in `src/data/`; `illustrative: false` flipped. Also added `/results/` to master's `.gitignore` (was branch-only; `results/` holds real addresses + a 488 MB pickle). Committed on `master` as `e293cd6`, merged into this branch — **push of `master` to origin was permission-denied (production deploy); owner must `git push` from master or grant the permission.**
 
-**Blocked on owner:**
-- [ ] **T17** B.S. coursework — transcript PDF not yet dropped at repo root
+**In progress:**
+- [ ] **T17** B.S. coursework — transcript provided in conversation 2026-07-08 (PDF attachment; never committed). Curated list presented to owner — awaiting approval before editing `education.ts`.
 
 **Environment note:** WSL now has userland Node 24.18.0 at `~/.local/opt/node-v24.18.0-linux-x64/bin` (on PATH via `.bashrc`); `node_modules` reinstalled with Linux natives — a Windows-side build would need `npm install` again. Git push uses the Windows credential manager (configured in repo git config).
 
