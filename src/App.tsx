@@ -9,6 +9,10 @@ const ProjectDetail = lazy(() =>
   import('@/pages/project-detail').then((m) => ({ default: m.ProjectDetail }))
 );
 
+const HowIBuild = lazy(() =>
+  import('@/pages/how-i-build').then((m) => ({ default: m.HowIBuild }))
+);
+
 function LoadingFallback() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-5xl space-y-10 animate-pulse">
@@ -43,6 +47,14 @@ function App() {
               element={
                 <Suspense fallback={<LoadingFallback />}>
                   <ProjectDetail />
+                </Suspense>
+              }
+            />
+            <Route
+              path="how-i-build"
+              element={
+                <Suspense fallback={<LoadingFallback />}>
+                  <HowIBuild />
                 </Suspense>
               }
             />
