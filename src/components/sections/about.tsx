@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { MapPin, Sparkles } from 'lucide-react';
 import { aboutCards, profile } from '@/content/profile';
 
@@ -34,6 +35,12 @@ export function About() {
             {profile.bio.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
+            <Link
+              to="/journey"
+              className="inline-block text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Read my full journey &rarr;
+            </Link>
           </div>
 
           {/* Quick Highlight Cards */}
