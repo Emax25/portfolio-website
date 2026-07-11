@@ -68,17 +68,17 @@ export const pmcmcInsiderDetection: Project = {
   },
   timeline: [
     {
-      date: 'Mar 2026',
+      date: 'May 2026',
       title: 'Scoping and data pipeline',
       description: 'Framed insider detection as latent-state inference in a switching state-space model, and built the Polymarket data pipeline: ten 2024 U.S. politics markets, the last 2,000 trades of each, pulled from the Data API and cleaned into 20,000 trades across 15,528 wallets.'
     },
     {
-      date: 'Apr–May 2026',
+      date: 'May–Jun 2026',
       title: 'Sampler implementation and synthetic validation',
       description: 'Implemented Rao-Blackwellized conditional SMC, Particle Gibbs, and interacting PMCMC, then validated on synthetic markets with planted insiders: 0.96 pooled ROC AUC with all three planted wallets ranked on top.'
     },
     {
-      date: 'May–Jun 2026',
+      date: 'Jun 2026',
       title: 'Real-data inference and paper',
       description: 'Ran an overnight 1,500-iteration Particle Gibbs sweep over the full ten-market pool. The ranking surfaced one wallet at 0.88 posterior insider propensity (461 trades, all in a single Fed-chair nomination market), and the writeup was submitted as a graduate Monte Carlo independent project at UChicago.'
     },
