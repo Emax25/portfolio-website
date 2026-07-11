@@ -7,8 +7,8 @@ export const intradayTradingSystem: Project = {
   summary: 'A cross-sectional intraday momentum trading system running a live paper-trading pipeline over equities and cryptocurrencies.',
   tags: ['Python', 'Systematic Trading', 'Time-Series Analysis', 'Portfolio Construction', 'Alpaca API'],
   problem: [
-    'Capturing cross-sectional intraday momentum systematically requires more than a signal: it needs reliable intraday data ingestion, robust portfolio construction, and an automated execution engine.',
-    'The goal was to build the full stack — from raw 5-minute bars to live order execution — as a single coherent system.'
+    'Capturing cross-sectional intraday momentum systematically requires more than a signal: it needs reliable intraday data ingestion, portfolio construction, and an automated execution engine.',
+    'The goal was to build the full stack, from raw 5-minute bars to live order execution, as a single coherent system.'
   ],
   approach: [
     'I built an end-to-end systematic trading pipeline in Python that ingests 5-minute bar data for 100+ equities and 10 cryptocurrencies.',
@@ -17,7 +17,7 @@ export const intradayTradingSystem: Project = {
   ],
   results: [
     'The live paper-trading pipeline executes roughly 20 trades per day end-to-end without manual intervention.',
-    'The modular architecture separates data ingestion, signal generation, portfolio construction, and execution, making it straightforward to iterate on new strategies.'
+    'The architecture separates data ingestion, signal generation, portfolio construction, and execution into modules, so a new strategy can be tested without rebuilding the rest of the pipeline.'
   ],
   metrics: [
     {

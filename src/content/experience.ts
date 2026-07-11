@@ -8,11 +8,10 @@ export const experiences: ExperienceEntry[] = [
     startDate: 'May 2026',
     endDate: 'Present',
     description: [
-      'Migrated 20+ studies and signals from legacy R to Python, achieving a ~500x runtime reduction and moving signal refresh from daily to hourly intraday.',
-      'Built a layered market/asset object model with a unified query interface.',
-      'Implemented market data ingestion via the Bloomberg API.',
-      'Developed a Flask REST API and front-end UI for internal use.',
-      'Added an OpenAI-powered natural-language query layer (built with Cursor/Claude under GitLab).'
+      'Migrated 20+ studies and signals from a legacy R codebase to Python, cutting runtimes ~500x and extending coverage from daily to hourly intraday data.',
+      'Designed a layered market/asset object model with one query interface for cross-asset, cross-timeframe research.',
+      'Integrated the Bloomberg API and exposed the backend through a Flask REST API with a front-end UI for internal use.',
+      'Added an OpenAI-powered natural-language layer that lets a non-technical Managing Director self-serve historical market data (built with Cursor and Claude under GitLab).'
     ],
     tags: ['Python', 'R', 'Bloomberg API', 'Flask', 'GitLab', 'LLMs'],
     featured: true
@@ -24,9 +23,8 @@ export const experiences: ExperienceEntry[] = [
     startDate: 'Jan 2026',
     endDate: 'Mar 2026',
     description: [
-      'Developed a Python pipeline parsing SEC 13F filings and matching them to daily equity flows.',
-      'Built event-driven tools and dual-axis visualizations at 1-, 7-, and 30-day horizons.',
-      'Integrated the tools into the firm’s dashboard.'
+      'Built a Python pipeline matching 40 SEC 13F filings to daily equity flows for stock-level positioning analysis.',
+      'Engineered event-driven tools and dual-axis visualizations quantifying flow changes at 1-, 7-, and 30-day horizons, integrated into the firm’s proprietary dashboard.'
     ],
     tags: ['Python', 'Pandas', 'SEC 13F', 'Data Visualization', 'Event Studies'],
     featured: true
@@ -38,9 +36,8 @@ export const experiences: ExperienceEntry[] = [
     startDate: 'Sep 2025',
     endDate: 'Dec 2025',
     description: [
-      'Engineered time-series features for a hedge-fund-manager classification algorithm.',
-      'Designed a modified gain-to-pain ratio for assessing risk-adjusted returns.',
-      'Improved the portfolio’s Omega ratio by 20%.'
+      'Developed a return-persistence feature and a modified gain-to-pain ratio for a proprietary model scoring ~200 emerging hedge-fund managers.',
+      'Increased the portfolio’s Omega ratio by 20%.'
     ],
     tags: ['Python', 'Time-Series Analysis', 'Hedge Fund Classification', 'Portfolio Optimization', 'Risk Metrics'],
     featured: true

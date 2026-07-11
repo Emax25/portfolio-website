@@ -2,25 +2,25 @@ import type { AboutCards, Profile } from './types';
 
 export const profile: Profile = {
   name: 'Charlie Carvajal',
-  title: 'M.S. Financial Mathematics @ UChicago — Quantitative Research, Trading, and Development',
+  title: 'M.S. Financial Mathematics @ UChicago · Quantitative Research, Trading, and Development',
   location: 'Chicago, IL',
   email: 'carvajalchar25@uchicago.edu',
   linkedin: 'https://linkedin.com/in/carvajalchar',
   github: 'https://github.com/Emax25',
   bio: [
-    'I am a computational problem solver and financial engineering student currently pursuing an M.S. in Financial Mathematics at the University of Chicago. With dual undergraduate degrees in Astrophysics and Computer Science (Machine Learning specialization) from UChicago, I bring a rigorous mathematical foundation and deep technical toolkit to quantitative research, trading, and development.',
-    'My experience ranges from migrating legacy R-based signaling pipelines to high-performance Python, building firm-wide visualization dashboards, and analyzing time-series datasets to model portfolio optimization. I thrive at the intersection of statistical modeling, machine learning, and high-performance computing to solve complex problems in financial markets.'
+    'I am finishing an M.S. in Financial Mathematics at the University of Chicago, where I also earned undergraduate degrees in Astrophysics and Computer Science with a machine learning specialization. I came to markets from physics because quantitative finance kept offering the things I already loved: hard applied math, open problems, and fast feedback on whether you are right.',
+    'At Cantor Fitzgerald I have migrated 20+ studies and signals from legacy R to Python, cutting runtimes roughly 500x and extending coverage from daily to hourly intraday data. Before that I built a pipeline matching 40 SEC 13F filings to daily equity flows at Exponential Technology, and at Bodhi Research Group developed a return-persistence feature and a modified gain-to-pain ratio for a model scoring around 200 emerging hedge-fund managers, which raised the portfolio\'s Omega ratio by 20%.'
   ]
 };
 
 export const aboutCards: AboutCards = {
   philosophy: {
-    title: 'Foundational Philosophy',
-    body: 'Applying rigorous scientific inquiry from astrophysics and computational systems modeling to formulate, optimize, and test quantitative trading strategies.',
+    title: 'Approach',
+    body: 'The method I learned in astrophysics, applied to markets: state the assumptions, fit the model to messy data, and trust nothing until it survives testing.',
   },
   currentFocus: {
     label: 'Current Focus',
     heading: 'University of Chicago',
-    body: 'Pursuing MSFM. Combining stochastic processes, statistical time-series, options pricing, and high-performance computing to build robust financial systems.',
+    body: 'M.S. in Financial Mathematics, expected December 2026. Coursework in stochastic calculus, Monte Carlo simulation, time-series analysis, and portfolio and risk management.',
   },
 };

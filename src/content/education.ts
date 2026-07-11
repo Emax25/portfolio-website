@@ -22,7 +22,7 @@ export const education: EducationEntry[] = [
       'FX Markets'
     ],
     details: [
-      'Graduate coursework spanning stochastic modeling, simulation, statistics, and computational finance.'
+      'Graduate coursework in stochastic modeling, simulation, statistics, and computational finance.'
     ]
   },
   {

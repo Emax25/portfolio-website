@@ -20,21 +20,21 @@ export function Contact() {
       label: 'Email',
       value: profile.email,
       href: `mailto:${profile.email}`,
-      description: 'Primary contact method for recruiting and professional inquiries.',
+      description: 'For recruiting and any professional inquiries.',
     },
     {
       icon: <Linkedin className="h-5 w-5 text-[#0A66C2]" />,
       label: 'LinkedIn',
       value: 'linkedin.com/in/carvajalchar',
       href: profile.linkedin,
-      description: 'Professional networking and career connection.',
+      description: 'Full work history, and the best place to connect.',
     },
     {
       icon: <Github className="h-5 w-5 text-foreground" />,
       label: 'GitHub',
       value: profile.github.replace(/^https?:\/\//, ''),
       href: profile.github,
-      description: 'Open-source code, quantitative algorithms, and developer activity.',
+      description: 'Public code, including the PMCMC insider-detection sampler.',
     },
   ];
 

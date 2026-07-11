@@ -24,7 +24,7 @@ export function Hero() {
       icon: <Zap className="h-5 w-5 text-amber-500" />,
       value: '~500x Speedup',
       label: 'Cantor Fitzgerald',
-      detail: 'Signal execution runtime reduction',
+      detail: 'R-to-Python migration of 20+ signals',
     },
     {
       icon: <BarChart2 className="h-5 w-5 text-blue-500" />,

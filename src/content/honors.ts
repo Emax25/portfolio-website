@@ -6,7 +6,7 @@ export const honors: HonorEntry[] = [
     title: '2nd Place of 616 Teams (410% One-Month Return)',
     issuer: 'CME Group University Trading Challenge',
     year: '2025',
-    description: 'Traded directional futures on gold, silver, and natural gas to achieve a 410% return over a one-month trading period.'
+    description: 'Devised and executed directional futures strategies on gold, silver, and natural gas alongside teammates, reaching a 410% return over one month.'
   },
   {
     id: 'questbridge',

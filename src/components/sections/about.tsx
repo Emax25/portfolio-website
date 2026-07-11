@@ -21,7 +21,7 @@ export function About() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">About Me</h2>
-            <p className="text-muted-foreground text-sm">Background, positioning, and philosophy</p>
+            <p className="text-muted-foreground text-sm">Background and how I got here</p>
           </div>
           <div className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground bg-muted/40 px-3.5 py-1.5 rounded-full border border-border/50 self-start md:self-auto">
             <MapPin className="h-4 w-4 text-primary" />
