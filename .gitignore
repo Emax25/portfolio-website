@@ -31,3 +31,5 @@ dist-ssr
 /*Transcript*.pdf
 /processed/
 /results/
+.claude/skills/charlie-voice/
+.claude/skills/humanizer/
