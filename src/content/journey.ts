@@ -1,26 +1,26 @@
 import type { JourneyContent } from './types';
 
 export const journey: JourneyContent = {
-  title: 'The One Constant',
+  title: 'My Journey',
   subtitle:
-    'Twenty-some addresses, a physics detour, and the through-line that led me to quantitative finance.',
+    'How I got from a childhood of constant moves to quantitative finance, by way of physics.',
   sections: [
     {
       id: 'origin',
       heading: 'Where I Started',
       body: [
         'Growing up, I moved more than twenty times. Enough times that I started classifying moves by distance: housing, school, city, state, country, and planetary. I have experienced every category except the last one, though I remain open to it. When people ask where I grew up, I still do not have a good answer.',
-        'What I did have, at every address, was math. Curricula changed between schools, friendships reset, and half my classes never transferred, but a hard problem was a hard problem anywhere. Math became the one thing I could carry with me, and I got attached to it the way you get attached to the only thing that survives every move. By high school that attachment had turned into real ambition.',
-        'QuestBridge matched me to the University of Chicago in 2020, and I arrived on campus set on becoming a theoretical physicist. After a childhood where everything was a variable, I wanted to spend my life on the few things that are not.'
+        'What I did have, at every address, was math. Curricula changed between schools, friendships reset, and half my classes never transferred, but a hard problem was a hard problem anywhere. Math became the one thing I could carry with me, and by high school it had turned into real ambition.',
+        'QuestBridge matched me to the University of Chicago in 2020, and I arrived on campus set on becoming a theoretical physicist.'
       ]
     },
     {
       id: 'pivot',
       heading: 'Physics, Code, Markets',
       body: [
-        'What I loved about physics was never really the physics. It was the way it applied serious mathematics to questions about how the world actually works, and the fact that the field was still open enough for a newcomer to contribute. The summer after my first year I discovered programming, having had almost no exposure to it before college, and fell hard. Suddenly I could build the models instead of just solving them on paper.',
-        'A computational astrophysics course sealed it. We were fitting machine learning models to messy telescope data, and I noticed that the part I looked forward to was the modeling itself - the statistics, the algorithms, the fight to extract signal from noise - more than the cosmology it served. Around the same time I admitted to myself that theoretical physics was not the right fit, and I went looking for fields with the same three attributes that had drawn me in: hard applied math, unsolved problems, and fast feedback on whether you are right.',
-        'There was no single lightning-bolt moment. Quantitative finance just kept winning the comparison, field after field, until the decision made itself. I graduated from UChicago in 2025 with dual degrees in Astrophysics and Computer Science, with a specialization in machine learning, already pointed at markets.'
+        'What I loved about physics was the way it applied serious mathematics to questions about how the world actually works, and the fact that the field was still open enough for a newcomer to contribute. The summer after my first year I discovered programming, having had almost no exposure to it before college, and fell hard. Suddenly I could build the models instead of just solving them on paper.',
+        'A computational astrophysics course sealed it. We were fitting machine learning models to messy telescope data, and I noticed that the part I looked forward to was the modeling itself - the statistics and the algorithms - more than the cosmology they served. Around the same time I admitted to myself that theoretical physics was not the right fit, and I went looking for fields with the same three attributes that had drawn me in: hard applied math, unsolved problems, and fast feedback on whether you are right.',
+        'Quantitative finance kept winning the comparison, field after field. I graduated from UChicago in 2025 with dual degrees in Astrophysics and Computer Science, with a specialization in machine learning, already pointed at markets.'
       ]
     },
     {
@@ -33,11 +33,11 @@ export const journey: JourneyContent = {
       ]
     },
     {
-      id: 'drive',
-      heading: 'What Drives Me',
+      id: 'next',
+      heading: 'What Comes Next',
       body: [
-        'The through-line in everything above is the same: take a messy real-world signal and build something rigorous, fast, and testable around it. That is what pulled me into physics, what made me fall for programming, and what I now get to do with market data. Markets just grade your model every single day, which is exactly the kind of feedback I went looking for.',
-        'I find it fitting that after a childhood where everything kept changing, I chose a field where everything changes by design, and the job is to find what does not. That is the work I want to keep doing: stochastic modeling, machine learning, and fast systems applied end to end on problems where being right is measurable. The addresses never stayed the same. The pursuit has.'
+        'The work I want to keep doing is stochastic modeling and machine learning, applied end to end on problems where being right is measurable. The engineering matters as much as the math to me: a model that cannot run at production speed is a paper, not a tool.',
+        'I do not know yet which corner of the field I will end up in, and I am in no hurry to decide. Every project so far has changed how I approached the next one, and I would like to keep it that way.'
       ]
     }
   ]
