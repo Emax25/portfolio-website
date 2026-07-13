@@ -1,0 +1,11 @@
+{
+  "illustrative": false,
+  "data": [
+    { "model": "Transformer (80/20)", "accuracy": 99.22 },
+    { "model": "Masked coin names", "accuracy": 99.4 },
+    { "model": "Zero-shot (held-out coins)", "accuracy": 99.57 },
+    { "model": "MLP only (no transformer)", "accuracy": 96.72 },
+    { "model": "Naive Bayes", "accuracy": 89.91 },
+    { "model": "BoW logistic regression", "accuracy": 89.57 }
+  ]
+}

@@ -15,6 +15,9 @@ const PosteriorProbabilityChart = lazy(() =>
 const ConfusionMatrixChart = lazy(() =>
   import('./ConfusionMatrixChart').then((m) => ({ default: m.ConfusionMatrixChart }))
 );
+const ModelComparisonChart = lazy(() =>
+  import('./ModelComparisonChart').then((m) => ({ default: m.ModelComparisonChart }))
+);
 
 function ChartSkeleton() {
   return <div className="w-full h-full animate-pulse rounded-md bg-muted" aria-hidden="true" />;
@@ -72,6 +75,8 @@ export function ProjectChart({ spec }: ProjectChartProps) {
         return <PosteriorProbabilityChart data={data} />;
       case 'confusion-matrix':
         return <ConfusionMatrixChart data={data} />;
+      case 'bar':
+        return <ModelComparisonChart data={data} />;
       default:
         return (
           <div className="flex items-center justify-center h-full text-muted-foreground">

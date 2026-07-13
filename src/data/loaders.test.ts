@@ -12,7 +12,7 @@ describe('getChartData', () => {
       'pmcmc-posterior',
       'trading-equity',
       'trading-returns-dist',
-      'aladdin-confusion',
+      'aladdin-model-comparison',
     ]) {
       const dataset = getChartData(src)
       expect(typeof dataset.illustrative).toBe('boolean')
@@ -40,6 +40,22 @@ describe('pmcmc-posterior real data', () => {
       expect(typeof row.iteration).toBe('number')
       expect(typeof row.suspiciousWallet).toBe('number')
       expect(typeof row.normalWallet).toBe('number')
+    }
+  })
+})
+
+describe('aladdin-model-comparison real data', () => {
+  it('is real data, not illustrative', () => {
+    const dataset = getChartData('aladdin-model-comparison')
+    expect(dataset.illustrative).toBe(false)
+  })
+
+  it('every row has a model name and an accuracy between 0 and 100', () => {
+    const dataset = getChartData('aladdin-model-comparison')
+    for (const row of dataset.data) {
+      expect(typeof row.model).toBe('string')
+      expect(row.accuracy).toBeGreaterThan(0)
+      expect(row.accuracy).toBeLessThanOrEqual(100)
     }
   })
 })

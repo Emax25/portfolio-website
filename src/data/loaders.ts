@@ -1,7 +1,7 @@
 import pmcmcPosterior from './pmcmc-posterior.json';
 import tradingEquity from './trading-equity.json';
 import tradingReturnsDist from './trading-returns-dist.json';
-import aladdinConfusion from './aladdin-confusion.json';
+import aladdinModelComparison from './aladdin-model-comparison.json';
 
 export interface ChartDataset<T> {
   illustrative: boolean;
@@ -42,8 +42,13 @@ export function loadTradingReturnsDist(): ChartDataset<DistributionPoint> {
   return tradingReturnsDist as ChartDataset<DistributionPoint>;
 }
 
-export function loadAladdinConfusion(): ChartDataset<ConfusionPoint> {
-  return aladdinConfusion as ChartDataset<ConfusionPoint>;
+export interface ModelComparisonPoint {
+  model: string;
+  accuracy: number;
+}
+
+export function loadAladdinModelComparison(): ChartDataset<ModelComparisonPoint> {
+  return aladdinModelComparison as ChartDataset<ModelComparisonPoint>;
 }
 
 export function getChartData(dataSrc: string): ChartDataset<any> {
@@ -54,8 +59,8 @@ export function getChartData(dataSrc: string): ChartDataset<any> {
       return loadTradingEquity();
     case 'trading-returns-dist':
       return loadTradingReturnsDist();
-    case 'aladdin-confusion':
-      return loadAladdinConfusion();
+    case 'aladdin-model-comparison':
+      return loadAladdinModelComparison();
     default:
       throw new Error(`Unknown data source: ${dataSrc}`);
   }
